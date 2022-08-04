@@ -1,0 +1,46 @@
+{
+  "name": "electron-boilerplate",
+  "version": "0.0.1",
+  "description": "Dummy template for integrate an PWA",
+  "main": "app.js",
+  "scripts": {
+    "preview": "electron app.js",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-sharapov/electron-boilerplate.git"
+  },
+  "author": "Alexander Sharapov",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/a-sharapov/electron-boilerplate/issues"
+  },
+  "homepage": "https://github.com/a-sharapov/electron-boilerplate#readme",
+  "devDependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.65",
+    "electron": "^20.0.1"
+  },
+  "dependencies": {
+    "update-electron-app": "^2.0.1"
+  },
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "a-sharapov",
+              "name": "electron-boilerplate"
+            },
+            "prerelease": false,
+            "draft": true
+          }
+        }
+      ]
+    }
+  }
+}
